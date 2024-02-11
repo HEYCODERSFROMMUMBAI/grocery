@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit &amp; Veg Goals </title>
+  <link rel="icon" href="images/apple.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Imprima&family=Margarine&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header row">
+      <h1 class="app-name">Fruit &amp; Veg Goals</h1>
+    </header>
+
+    <main class="main">
+      <div class="overlay"></div>
+      <div class="error-modal hidden">
+        <div class="exit-div row">
+          <i class="fas exit error fa-times"></i>
+        </div>
+        <h3 class="error-title"></h3>
+        <p class="error-message"></p>
+        <p>Please try again.</p>
+      </div>
+      <form class="goal form" data-view="goal-form">
+        <div class="welcome-modal">
+          <div class="exit-div row">
+            <i class="fas exit fa-times"></i>
+          </div>
+          <h3>Welcome!</h3>
+          <p>This quick walk-thru will guide you on how to use this app</p>
+          <div class="welcome continue modal-button">Continue</div>
+        </div>
+
+        <div class="info-modal know hidden">
+          <div class="exit-div row">
+            <i class="fas exit know fa-times"></i>
+          </div>
+          <h3 class="info-modal-header">Did you know?</h3>
+          <p class="info-modal-text">Fruits and veggies can help you live longer!</p>
+          <p class="info-modal-text">A diet rich in vegetables and fruits can:
+            <ul class="info-modal-list">
+              <li>lower blood pressure</li>
+              <li>reduce the risk of heart disease and stroke</li>
+              <li>prevent some types of cancer</li>
+              <li>lower risk of eye and digestive problems</li>
+              <li>have a positive effect on blood sugar</li>
+            </ul>
+          </p>
+          <div class="info-next modal-button">Next</div>
+        </div>
+
+        <div class="info-modal goal hidden">
+          <div class="exit-div row">
+            <i class="fas exit goal fa-times"></i>
+          </div>
+          <h3 class="info-modal-header">Setting Your Goal</h3>
+          <p class="info-modal-text">The <a href="https://www.heart.org/en/healthy-living/healthy-eating/add-color/fruits-and-vegetables-serving-sizes" target="_blank">American Heart Association</a> recommends 4 servings of fruits and 5 servings of vegetables a day.</p>
+          <p>Set your goal to match the amounts you are comfortable with.</p>
+        </div>
+
+        <div class="goal-modal hidden">
+          <div class="exit-div row">
+            <i class="fas exit fa-times"></i>
+          </div>
+          <h3>Set Your Goals</h3>
+          <p>Adjust these amounts to set goals you are comfortable with</p>
+            <div class="goal continue modal-button">Continue</div>
+        </div>
+
+        <h2 class="page-title">What's my goal today?
+          <i class="fas info fa-info-circle"></i>
+        </h2>
+        <div class="goal-input">
+          <p>I want to eat</p>
+          <div class="form-inputs">
+            <div class="input">
+              <select class="fruit-input" name="fruit">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option selected value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <span>servings of fruits</span>
+            </div>
+            <div class="input">
+              <select class="veg-input" name="veg">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option selected value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <span>servings of veggies</span>
+            </div>
+        </div>
+        </div>
+        <input type="submit" value="Next" class="next">
+      </form>
+
+      <form class="search form hidden" data-view="search-form">
+        <div class="search-modal hidden">
+          <div class="exit-div row">
+            <i class="fas exit fa-times"></i>
+          </div>
+          <h3>Search</h3>
+          <p>Look up any food item in the <a href="https://www.nutritionix.com/" target="https://www.nutritionix.com/">Nutritionix.com</a> database to add to your daily log</p>
+          <div class="search continue modal-button">Continue</div>
+        </div>
+
+        <h2 class="page-title">Look up a fruit or veggie</h2>
+        <div class="search-div row">
+          <div class="search-bar-suggestions">
+            <input type="text" class="search-bar" placeholder="apple, banana, carrot, etc." required>
+            <div class="result hidden">
+              <div class="img-div">
+                <img class="img-result">
+                <img class="spinner hidden" src="images/spinner.gif" href="spinner">
+              </div>
+              <div class="text-result"></div>
+            </div>
+            <div class="result hidden">
+              <div class="img-div">
+                <img class="img-result">
+                <img class="spinner hidden" src="images/spinner.gif" href="spinner">
+              </div>
+              <div class="text-result"></div>
+            </div>
+            <div class="result hidden">
+              <div class="img-div">
+                <img class="img-result">
+                <img class="spinner hidden" src="images/spinner.gif" href="spinner">
+              </div>
+              <div class="text-result"></div>
+            </div>
+            <div class="result hidden">
+              <div class="img-div">
+                <img class="img-result">
+                <img class="spinner hidden" src="images/spinner.gif" href="spinner">
+              </div>
+              <div class="text-result"></div>
+            </div>
+          </div>
+          <input type="submit" value="Search" class="search-button">
+        </div>
+      </form>
+
+      <div class="results-page hidden" data-view="search-results">
+        <h2 class="search-results page-title"></h2>
+        <img class="search loader hidden" src="images/bean-eater.gif" alt="loading">
+        <div class="result-list-div">
+          <p class="no-results hidden">No matching items found</p>
+          <div class="result-header column-one-fourth row">
+            <div class="result-header-div fruit">
+              <i class="add fas fa-plus"></i>
+              <p class="result-header-text">fruit</p>
+            </div>
+            <div class="result-header-div veg">
+              <i class="add fas fa-plus"></i>
+              <p class="result-header-text">veggie</p>
+            </div>
+          </div>
+          <div class="result-list"></div>
+        </div>
+      </div>
+
+      <div class="item-details-page hidden">
+          <div class="item-details-header row">
+            <form class="add-log-form">
+              <div class="details-name-div">
+                <h1 class="item-details-name"></h1>
+                <div class="log-input-div">
+                  <label for="add-select" class="add-log-title">Add to log:</label>
+                  <select class="add-input" name="add" id="add-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="add-fruit add-button not-added">
+                <i class="add-log-icon fas fa-plus"></i>
+                <span> to fruits </span>
+                <i class="add-log-icon fruit-icon fas fa-apple-alt"></i>
+              </div>
+              <div class="add-veg add-button not-added">
+                <i class="add-log-icon fas fa-plus"></i>
+                <span> to veggies </span>
+                <i class="add-log-icon fas fa-carrot"></i>
+              </div>
+            </form>
+            <div class="details-img-div">
+              <img class="item-details-img">
+            </div>
+          </div>
+          <img class="details loader hidden" src="images/bean-eater.gif" alt="loading">
+          <table class="nutrition-table">
+            <thead>
+              <tr>
+                <th class="nutrition-title">Nutrition Facts</th>
+                <th></th>
+              </tr>
+              <tr>
+                <th class="nutrition-food-name" colspan="2"></th>
+              </tr>
+              <tr>
+                <th class="nutrition-header-last-row serving-label">Serving Size:</th>
+                <th class="nutrition-header-last-row serving-size"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="serving-amount" colspan="2">Amount Per Serving</td>
+              </tr>
+              <tr>
+                <td class="nutrition-calories-last-row"><span class="nutrition-category">Calories </span><span class="calories"></span></td>
+                <td class="nutrition-calories-last-row daily-values">Calories from Fat <span class="calories-fat"></span></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="daily-values"><span class="nutrition-category">% Daily Value</span>*</td>
+              </tr>
+              <tr>
+                <td><span class="nutrition-category">Total Fat </span><span class="total-fat"></span></td>
+                <td class="daily-values total-fat-percent"></td>
+              </tr>
+              <tr>
+                <td><span class="nutrition-category">Sodium </span><span class="sodium"></span></td>
+                <td class="daily-values sodium-percent"></td>
+              </tr>
+              <tr>
+                <td><span class="nutrition-category">Potassium </span><span class="potassium"></span></td>
+                <td class="daily-values potassium-percent"></td>
+              </tr>
+              <tr>
+                <td><span class="nutrition-category">Total Carbohydrates </span><span class="total-carbs"></span></td>
+                <td class="daily-values total-carbs-percent"></td>
+              </tr>
+              <tr>
+                <td class="nutrition-subcategory">Dietary Fiber <span class="fiber"></span></td>
+                <td class="daily-values fiber-percent"></td>
+              </tr>
+              <tr>
+                <td colspan="2" class="nutrition-subcategory">Sugars <span class="sugar"></span></td>
+              </tr>
+              <tr>
+                <td colspan="2" class="nutrition-header-last-row"><span class="nutrition-category">Protein </span><span class="protein"></span></td>
+              </tr>
+              <tr>
+                <td colspan="2"><ul class="daily-values-message"><li>Percent Daily Values are based on a 2,000 calorie diet</li></ul></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      <div class="daily-log-page hidden">
+        <div class="log-modal hidden">
+          <div class="exit-div row">
+            <i class="fas exit fa-times"></i>
+          </div>
+          <h3>Daily Log</h3>
+          <p>View the fruits and veggies that you've added to your log</p>
+          <div class="log continue modal-button">Continue</div>
+        </div>
+        <h2 class="search-results page-title">Daily Log</h2>
+        <div class="category-div">
+          <h3 class="category-title">Fruits</h3>
+          <p class="no-fruit">Nothing added yet</p>
+          <div class="fruit-log"></div>
+        </div>
+        <div class="category-div">
+          <h3 class="category-title">Veggies</h3>
+          <p class="no-veg">Nothing added yet</p>
+          <div class="veg-log"></div>
+        </div>
+      </div>
+
+      <div class="progress-page hidden">
+        <div class="progress-modal hidden">
+          <div class="exit-div row">
+            <i class="fas exit fa-times"></i>
+          </div>
+          <h3>Progress</h3>
+          <p>View your progress towards the goals you set</p>
+          <div class="get-started modal-button">Get Started</div>
+        </div>
+        <h2 class="page-title">Today's Progress</h2>
+        <div class="progress-div">
+          <div class="category-div">
+            <h3 class="category-title">Fruits</h3>
+            <div class="total">
+              <div class="fruit-bar completed"></div>
+            </div>
+            <div class="fruit-progress">0/4 completed (0%)</div>
+          </div>
+          <div class="category-div">
+            <h3 class="category-title">Veggies</h3>
+            <div class="total">
+              <div class="veg-bar completed"></div>
+            </div>
+            <div class="veg-progress">0/5 completed (0%)</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer row">
+      <div class="nav-icon-div">
+        <i class="nav fas fa-home"></i>
+        <span>set goals</span>
+      </div>
+      <div class="nav-icon-div">
+        <i class="nav fas fa-search"></i>
+        <span>look up</span>
+      </div>
+      <div class="nav-icon-div">
+        <i class="nav fas fa-list"></i>
+        <span>daily log</span>
+      </div>
+      <div class="nav-icon-div">
+        <i class="nav fas fa-chart-bar"></i>
+        <span>progress</span>
+      </div>
+    </footer>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

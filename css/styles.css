@@ -1,0 +1,732 @@
+body {
+  display: flex;
+  text-align: center;
+  font-family: 'Imprima', sans-serif;
+  color: rgb(66, 65, 65);
+}
+
+.header {
+  color: white;
+  background-color: #9ede73;
+  width: 100%;
+  z-index: 1;
+}
+
+.app-name {
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: normal;
+  font-family: 'Margarine', cursive;
+  letter-spacing: 0.1em;
+}
+
+.main {
+  position: relative;
+  min-height: 90vh;
+}
+
+.overlay {
+  background-color: rgb(0, 0, 0, 0.5);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.welcome-modal,
+.goal-modal,
+.search-modal,
+.log-modal,
+.progress-modal,
+.info-modal,
+.error-modal {
+  border: 1px solid gray;
+  border-radius: 20px;
+  position: absolute;
+  background-color: lightgoldenrodyellow;
+  padding: 1rem 1rem 2rem 2rem;
+  max-width: 500px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+}
+
+.error-modal {
+  width: 84%;
+  left: 7%;
+  top: 12rem;
+  position: fixed;
+}
+
+.welcome-modal {
+  width: 80%;
+  left: 10%;
+  top: 25%;
+}
+
+.goal-modal {
+  width: 60%;
+  right: 5%;
+  top: 25%;
+}
+
+.search-modal {
+  top: 13rem;
+  width: 90%;
+}
+
+.log-modal,
+.progress-modal {
+  bottom: 4rem;
+  width: 90%;
+}
+
+.info-modal.know {
+  width: 90%;
+  top: 3%;
+  padding-bottom: 4.5rem;
+}
+
+.info-modal.know > ul {
+  padding-left: 1.8rem;
+}
+
+.info-modal.goal {
+  width: 90%;
+  top: 5%;
+}
+
+.welcome-modal > h3,
+.goal-modal > h3,
+.search-modal > h3,
+.log-modal > h3,
+.progress-modal > h3,
+.info-modal > h3,
+.error-modal > h3 {
+  margin: 0;
+}
+
+.welcome-modal > p,
+.goal-modal > p,
+.search-modal > p,
+.log-modal > p,
+.progress-modal > p,
+.info-modal > p,
+.error-modal > p {
+  padding-right: 1rem;
+}
+
+.info-modal-list {
+  line-height: 1.5;
+}
+
+.modal-button {
+  border: 1px solid darkgray;
+  border-radius: 50px;
+  background-color: lightgray;
+  padding: 0.4rem 0.3rem;
+  margin: 0 auto;
+  width: 8rem;
+  text-align: center;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+}
+
+.exit-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exit {
+  font-size: 1.5em;
+  color: gray;
+}
+
+.exit:hover {
+  cursor: pointer;
+  color: rgb(66, 65, 65);
+}
+
+.info {
+  color: lightgray;
+}
+
+.info:hover {
+  cursor: pointer;
+  color: lightgreen;
+}
+
+.continue,
+.get-started,
+.info-next {
+  background-color: lightgray;
+}
+
+.continue:hover,
+.get-started:hover,
+.info-next:hover {
+  cursor: pointer;
+  background-color: darkgray;
+}
+
+.page-title {
+  padding-top: 1rem;
+  margin: 1rem auto;
+  font-size: 1.4em;
+  letter-spacing: 0.1rem;
+}
+
+.form-inputs {
+  margin: 0 auto;
+}
+
+.goal-input {
+  padding: 1rem 0;
+  margin: 0 auto;
+  font-size: 1.3rem;
+}
+
+.input {
+  padding: 1rem 0;
+}
+
+.input > select {
+  cursor: pointer;
+  color: rgb(66, 65, 65);
+  border-radius: 10px;
+  height: 3rem;
+  font-size: 1.3rem;
+}
+
+.fruit-input,
+.veg-input {
+  font-family: 'Imprima', sans-serif;
+}
+
+.highlight {
+  position: relative;
+  border: 3px solid orange;
+  border-radius: 5px;
+}
+
+.next {
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  width: 10rem;
+  border-radius: 50px;
+  border: 1px solid darkgray;
+  color: rgb(66, 65, 65);
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+  font-family: 'Imprima', sans-serif;
+}
+
+.search-div {
+  margin-top: 2rem;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.search-bar-suggestions {
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
+  border: 1px solid darkgray;
+  border-radius: 20px 0 0 20px;
+  font-family: 'Imprima', sans-serif;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+  padding: 0 1rem;
+}
+
+.search-button {
+  font-family: 'Imprima', sans-serif;
+  border-radius: 0 20px 20px 0;
+  border: 1px solid lightgray;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+}
+
+.search-bar,
+.search-button {
+  font-size: 1.2em;
+  height: 3rem;
+}
+
+.search-bar:focus {
+  outline: none;
+  border: 2px solid limegreen;
+}
+
+.next:hover,
+.search-button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.result {
+  border: 1px solid rgb(189, 189, 189);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.r1 {
+  border-radius: 10px 10px 0 0;
+}
+
+.r4 {
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+}
+
+.result:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.text-result {
+  padding-left: 2rem;
+}
+
+.img-div {
+  width: 4rem;
+  height: 5rem;
+  display: flex;
+}
+
+.img-result {
+  width: 100%;
+  margin: 0.5rem;
+  object-fit: contain;
+}
+
+.spinner {
+  margin: 0.5rem;
+}
+
+.result-div {
+  align-items: center;
+  border-top: 1px solid lightgray;
+}
+
+.result-text {
+  flex-grow: 1;
+  padding-left: 2rem;
+}
+
+.result-name {
+  font-size: 1.2rem;
+}
+
+.result-description {
+  color: rgb(175, 182, 190);
+  display: none;
+}
+
+.result-header-div {
+  width: 4rem;
+  height: 3rem;
+  text-align: center;
+}
+
+.result-header-text {
+  color: rgb(175, 182, 190);
+  margin: 0;
+}
+
+.result-list {
+  cursor: pointer;
+}
+
+.add {
+  font-size: 1.4em;
+  color: rgb(175, 182, 190);
+}
+
+.fruit {
+  border-right: 1px solid lightgray;
+}
+
+.icon-div {
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-icon {
+  font-size: 1.5em;
+}
+
+.item-icon:hover {
+  color: lightgreen;
+}
+
+.item-details-page {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.item-details-header {
+  padding: 0 1rem;
+  justify-content: space-evenly;
+}
+
+.details-img-div {
+  display: flex;
+}
+
+.item-details-img {
+  width: 100%;
+  margin: 0.5rem;
+  object-fit: contain;
+}
+
+.item-details-name {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.nutrition-title {
+  font-size: 1.8em;
+  white-space: nowrap;
+}
+
+.nutrition-table {
+  table-layout: fixed;
+  border: 1px solid rgb(66, 65, 65);
+  padding: 0.5rem;
+  border-spacing: 0;
+  font-size: 1em;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.nutrition-food-name {
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+.nutrition-header-last-row {
+  border-bottom: 8px solid;
+}
+
+.nutrition-calories-last-row {
+  border-bottom: 4px solid;
+  white-space: normal;
+}
+
+.nutrition-table > tbody td {
+  border-top: 1px solid rgb(66, 65, 65);
+  white-space: nowrap;
+}
+
+.nutrition-table > thead th:nth-child(1) {
+  width: 100px;
+}
+
+.nutrition-category {
+  font-weight: bold;
+}
+
+.nutrition-subcategory {
+  padding-left: 1rem;
+}
+
+.serving-label {
+  vertical-align: top;
+}
+
+.serving-amount {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.serving-size {
+  text-align: right;
+  font-weight: normal;
+}
+
+.daily-values {
+  text-align: right;
+  width: 90%;
+}
+
+.daily-values-message {
+  font-size: 0.9em;
+  color: gray;
+  list-style-type: '*';
+  padding-left: 0.5em;
+  white-space: normal;
+}
+
+.daily-values-message > li {
+  padding-left: 0.2rem;
+}
+
+.calories-fat {
+  font-weight: normal;
+}
+
+.add-button {
+  text-align: center;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  margin-bottom: 0.4rem;
+  padding: 0.4rem 0;
+  width: 9.6rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+}
+
+.add-log-form {
+  padding-top: 0.5rem;
+}
+
+.add-log-title {
+  line-height: 1em;
+  font-style: italic;
+  color: gray;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.log-input-div {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  justify-content: center;
+}
+
+.add-input {
+  padding: 0.5rem 0;
+  margin-left: 0.5rem;
+  border-radius: 10px;
+  font-family: 'Imprima', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.add-log-icon {
+  color: rgb(217, 219, 221);
+  padding: 0.1rem;
+}
+
+.added {
+  background-color: limegreen;
+  color: rgb(246, 246, 246);
+}
+
+.not-added {
+  background-color: rgb(246, 246, 246);
+}
+
+.added-icon {
+  color: limegreen;
+}
+
+.not-added-icon {
+  color: rgb(217, 219, 221);
+}
+
+.no-fruit,
+.no-veg,
+.no-results {
+  color: lightgray;
+  font-style: italic;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.category-div {
+  padding: 0.5rem 0 2rem;
+}
+
+.category-title {
+  color: darkgray;
+  margin: 1rem 0 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+}
+
+.delete-icon {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: darkgray;
+}
+
+.progress-div {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.total {
+  height: 3rem;
+  border: 1px solid lightgray;
+  margin: 0 auto;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+}
+
+.completed {
+  height: 100%;
+  width: 0%;
+  visibility: hidden;
+  background-color: lightgreen;
+  border-right: 1px solid lightgray;
+  vertical-align: center;
+  text-align: center;
+  padding-top: 0.6rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: rgb(75, 73, 73);
+  border-radius: 50px;
+}
+
+.reached {
+  background-color: limegreen;
+  color: white;
+}
+
+.fruit-progress,
+.veg-progress {
+  font-size: 1.2em;
+  padding: 0.5rem 0 0 1rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-around;
+  background-color: #fafafa;
+  border-top: 1px solid lightgray;
+}
+
+.nav {
+  font-size: 2em;
+  color: rgb(194, 194, 194);
+}
+
+.nav:hover {
+  cursor: pointer;
+  color: lightgreen;
+}
+
+.nav-icon-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem 0;
+}
+
+.nav-icon-div > span {
+  color: darkgray;
+}
+
+.hidden {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.form,
+.results-page,
+.item-details-page,
+.daily-log-page,
+.progress-page {
+  padding: 2rem 0;
+  margin: 0 auto;
+  text-align: left;
+  width: 90%;
+}
+
+.results-page {
+  padding-bottom: 4rem;
+}
+
+.loader {
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .result-description {
+    display: block;
+  }
+
+  .form,
+  .results-page,
+  .item-details-page,
+  .daily-log-page,
+  .progress-page {
+    max-width: 600px;
+  }
+
+  .nutrition-table {
+    max-width: 500px;
+  }
+
+  .error-modal {
+    width: 34%;
+    left: 32%;
+    top: 20rem;
+  }
+
+  .welcome-modal {
+    width: 25%;
+    left: 38%;
+  }
+
+  .goal-modal {
+    width: 27%;
+    right: 26%;
+    top: 20%;
+  }
+
+  .search-modal {
+    width: 35%;
+    left: 35%;
+  }
+
+  .log-modal {
+    bottom: 10%;
+    right: 25%;
+    width: 25%;
+  }
+
+  .progress-modal {
+    bottom: 10%;
+    right: 1%;
+    width: 25%;
+  }
+
+  .info-modal.know {
+    width: 50%;
+    top: 15%;
+    left: 35%;
+  }
+
+  .info-modal.goal {
+    width: 40%;
+    top: 15%;
+    left: 35%;
+  }
+
+  .search-bar-suggestions {
+    width: 70%;
+  }
+}
